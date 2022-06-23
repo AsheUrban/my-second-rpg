@@ -7,6 +7,8 @@ describe('Battle', () => {
   let monster;
   beforeEach(() => {
     newCharWar = new Character("Warrior");
+    newCharWar.baseStats();
+    newCharWar.baseInv();
     monster = new Monster("Monster");
   });
 
