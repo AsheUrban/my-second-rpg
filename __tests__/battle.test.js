@@ -1,6 +1,6 @@
 import { Monster } from '../src/monster.js';
 import { Character } from '../src/character.js';
-import { Battle } from '../src/battle';
+import { battle } from '../src/battle';
 
 describe('Battle', () => {
   let newCharWar;
@@ -10,7 +10,6 @@ describe('Battle', () => {
     monster = new Monster("Monster");
   });
   test('should take in a character and monster to engage in battle', () => {
-    battle(newCharWar, monster);
     expect(battle(newCharWar, monster)).toEqual("Warrior is battling Monster")
   });
 });
