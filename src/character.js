@@ -4,6 +4,8 @@ export class Character {
     this.charClass = charClass;
     this.EXP = 0;
     this.bag = [];
+    this.baseStats;
+    this.baseInv;
   }
 
   baseStats(){
@@ -28,6 +30,7 @@ export class Character {
       this.hp = 30;
     }
   }
+
   baseInv(){
     if(this.charClass == "Wizard"){
       const Staff = {"name": "Staff", "damage": 10};

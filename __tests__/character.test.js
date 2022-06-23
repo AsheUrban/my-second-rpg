@@ -1,5 +1,4 @@
 import { Character } from '../src/character.js';
-import { Monster } from '../src/monster.js';
 
 describe('Character', () => {
   let newCharWiz;
@@ -59,5 +58,10 @@ describe('Character', () => {
     newCharCle.baseInv();
     expect(newCharCle.bag[0].name).toEqual("Sword");
     expect(newCharCle.bag[1].name).toEqual("ChestPlate");
+  });
+
+  test('should calculate damage and defense based on weapon and armor', () =>{
+    expect(newCharWar.dmg).toEqual(20);
+    expect(newCharWar.def).toEqual(6);
   });
 });
