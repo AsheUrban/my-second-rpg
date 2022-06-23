@@ -22,4 +22,11 @@ describe('Character', () => {
     newChar.baseStats();
     expect(newChar.int).toEqual(10);
   });
+
+  test('should give the character a starting inventory based on their class', () => {
+    const newChar = new Character("Wizard");
+    newChar.baseInv();
+    expect(newChar.bag[0]).toEqual("Staff");
+    expect(newChar.bag[1]).toEqual("Robe");
+  });
 });
