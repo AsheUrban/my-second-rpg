@@ -5,6 +5,7 @@ import { battle } from '../src/battle';
 describe('Battle', () => {
   let newCharWar;
   let monster;
+  
   beforeEach(() => {
     newCharWar = new Character("Warrior");
     newCharWar.baseStats();
@@ -24,11 +25,17 @@ describe('Battle', () => {
   test('should kill the monster if their hp goes to 0', () => {
     battle(newCharWar, monster);
     battle(newCharWar, monster);
-    expect(monster.status).toEqual("Dead")
+    expect(monster.status).toEqual("Dead");
   });
 
-  test('enemy should attack the player if its alive', () => {
+  test('enemy should attack the player if its alive', () => {  
+    expect(newCharWar.hp).toEqual(24);
     battle(newCharWar, monster);
+    expect(monster.status).toEqual("Alive");
     expect(newCharWar.hp).toEqual(23);
-  })
+    battle(newCharWar, monster);
+    expect(monster.status).toEqual("Dead");
+    expect(newCharWar.hp).toEqual(23);
+  });
+
 });

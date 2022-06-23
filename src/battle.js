@@ -6,5 +6,9 @@ export const battle = (player, enemy) => {
     enemy.status = "Dead";
   }
 
+  if(enemy.status === "Alive"){
+    player.hp -= enemy.str;
+  }
+
   return player.charClass + " is battling " + enemy.name;
 } 
