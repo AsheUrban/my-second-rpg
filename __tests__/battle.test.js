@@ -18,6 +18,12 @@ describe('Battle', () => {
 
   test('should take the players attack value away from the monsters health', () => {
     battle(newCharWar, monster);
-    expect(monster.hp).toEqual(0);
+    expect(monster.hp).toEqual(10);
+  });
+
+  test('should kill the monster if their hp goes to 0', () => {
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    expect(monster.status).toEqual("Dead")
   });
 });
