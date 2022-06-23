@@ -26,4 +26,9 @@ describe('Battle', () => {
     battle(newCharWar, monster);
     expect(monster.status).toEqual("Dead")
   });
+
+  test('enemy should attack the player if its alive', () => {
+    battle(newCharWar, monster);
+    expect(newCharWar.hp).toEqual(23);
+  })
 });
