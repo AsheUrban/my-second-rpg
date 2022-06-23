@@ -29,13 +29,13 @@ describe('Battle', () => {
   });
 
   test('enemy should attack the player if its alive', () => {  
-    expect(newCharWar.hp).toEqual(24);
+    expect(newCharWar.currentHp).toEqual(24);
     battle(newCharWar, monster);
     expect(monster.status).toEqual("Alive");
-    expect(newCharWar.hp).toEqual(23);
+    expect(newCharWar.currentHp).toEqual(23);
     battle(newCharWar, monster);
     expect(monster.status).toEqual("Dead");
-    expect(newCharWar.hp).toEqual(23);
+    expect(newCharWar.currentHp).toEqual(23);
   });
 
   test('enemy should give the player xp when it dies', () => {
@@ -45,6 +45,7 @@ describe('Battle', () => {
   })
 
   test('player should level up if they get enough exp to do so', () => {
+    battle(newCharWar, monster);
     battle(newCharWar, monster);
     battle(newCharWar, monster);
     battle(newCharWar, monster);

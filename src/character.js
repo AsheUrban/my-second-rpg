@@ -13,22 +13,26 @@ export class Character {
     if(this.charClass == "Wizard"){
       this.int = 10;
       this.str = 2;
-      this.hp = 20;
+      this.currentHp = 20;
+      this.maxHp = 20;
     }
     else if(this.charClass == "Warrior"){
       this.int = 2;
       this.str = 10;
-      this.hp = 24;
+      this.currentHp = 24;
+      this.maxHp = 24;
     }
     else if(this.charClass == "Rogue"){
       this.int = 8;
       this.str = 5;
-      this.hp = 22;
+      this.currentHp = 22;
+      this.maxHp = 22;
     }
     else if(this.charClass == "Cleric"){
       this.int = 6;
       this.str = 6;
-      this.hp = 30;
+      this.currentHp = 30;
+      this.maxHp = 30;
     }
   }
 
@@ -68,5 +72,12 @@ export class Character {
     }else if(weaponType == "magic"){
       this.dmg = charInt + weaponDamage;
     }
+  }
+
+  increaseStats(){
+    this.str += 1;
+    this.int += 1;
+    this.maxHp += 1;
+    this.currentHp = this.maxHp;
   }
 }

@@ -83,6 +83,6 @@ describe('Character', () => {
     expect(newCharWar.lvl).toEqual(2);
     expect(newCharWar.int).toEqual(3);
     expect(newCharWar.str).toEqual(11);
-    expect(newCharWar.hp).toEqual(25);
+    expect(newCharWar.maxHp).toEqual(25);
   })
 });

@@ -7,6 +7,6 @@ describe('Monster', () => {
   });
   test('should create a monster object with stats', () => {
     let newMonst = new Monster();
-    expect(newMonst.hp).toEqual(1);
+    expect(newMonst.hp).toEqual(30);
   });
-}); 
+});

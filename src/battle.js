@@ -11,8 +11,14 @@ export const battle = (player, enemy) => {
   if(enemy.status === "Alive"){
     let enemyAttack = enemy.str - player.def;
     if (enemyAttack > 0){
-      player.hp -= (enemyAttack);
+      player.currentHp -= (enemyAttack);
     }
+  }
+
+  if(player.EXP >= 100){
+    player.lvl += 1;
+    player.increaseStats();
+    player.EXP = 0;
   }
 
   return player.charClass + " is battling " + enemy.name;
