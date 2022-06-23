@@ -1,5 +1,6 @@
 export const battle = (player, enemy) => {
-  enemy.hp -= player.bag[0].damage;
+  player.calcValues();
+  enemy.hp -= player.dmg;
 
   if(enemy.hp <= 0){
     enemy.hp = 0;
@@ -7,7 +8,10 @@ export const battle = (player, enemy) => {
   }
 
   if(enemy.status === "Alive"){
-    player.hp -= enemy.str;
+    let enemyAttack = enemy.str - player.def;
+    if (enemyAttack > 0){
+      player.hp -= (enemyAttack);
+    }
   }
 
   return player.charClass + " is battling " + enemy.name;

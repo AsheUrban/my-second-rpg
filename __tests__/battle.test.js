@@ -38,4 +38,9 @@ describe('Battle', () => {
     expect(newCharWar.hp).toEqual(23);
   });
 
+  test('enemy should give the player xp when it dies', () => {
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    expect(newCharWar.EXP).toEqual(20);
+  })
 });
