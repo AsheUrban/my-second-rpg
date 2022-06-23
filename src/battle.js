@@ -16,7 +16,6 @@ export const battle = (player, enemy) => {
   }
 
   if(player.EXP >= 100){
-    player.lvl += 1;
     player.increaseStats();
     player.EXP = 0;
   }

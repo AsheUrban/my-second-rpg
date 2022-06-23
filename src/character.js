@@ -75,6 +75,7 @@ export class Character {
   }
 
   increaseStats(){
+    this.lvl += 1;
     this.str += 1;
     this.int += 1;
     this.maxHp += 1;
