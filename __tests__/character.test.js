@@ -1,12 +1,16 @@
 import { Character } from '../src/character.js';
+import { battle } from '../src/battle.js';
+import { Monster } from '../src/monster.js';
 
 describe('Character', () => {
   let newCharWiz;
   let newCharWar;
   let newCharRog;
   let newCharCle;
+  let monster;
 
   beforeEach(() => {
+    monster = new Monster();
     newCharWiz = new Character("Wizard");
     newCharWar = new Character("Warrior");
     newCharRog = new Character("Rogue");
@@ -68,4 +72,17 @@ describe('Character', () => {
     expect(newCharWiz.dmg).toEqual(20);
     expect(newCharWiz.def).toEqual(2);
   });
+
+  test('the characters level should influence their stats', () =>{
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    expect(newCharWar.lvl).toEqual(2);
+    expect(newCharWar.int).toEqual(3);
+    expect(newCharWar.str).toEqual(11);
+    expect(newCharWar.hp).toEqual(25);
+  })
 });

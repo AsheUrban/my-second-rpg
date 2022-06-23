@@ -1,6 +1,7 @@
 export class Character {
 
   constructor(charClass){
+    this.lvl = 1;
     this.charClass = charClass;
     this.EXP = 0;
     this.bag = [];
@@ -61,7 +62,7 @@ export class Character {
     let charInt = this.int;
 
     this.def = this.bag[1].armor;
-    
+
     if(weaponType == "physical"){
       this.dmg = charStr + weaponDamage;
     }else if(weaponType == "magic"){
