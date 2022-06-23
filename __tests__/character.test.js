@@ -61,7 +61,11 @@ describe('Character', () => {
   });
 
   test('should calculate damage and defense based on weapon and armor', () =>{
+    newCharWar.calcValues();
     expect(newCharWar.dmg).toEqual(20);
     expect(newCharWar.def).toEqual(6);
+    newCharWiz.calcValues();
+    expect(newCharWiz.dmg).toEqual(20);
+    expect(newCharWiz.def).toEqual(2);
   });
 });
