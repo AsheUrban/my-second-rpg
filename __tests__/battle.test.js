@@ -43,4 +43,13 @@ describe('Battle', () => {
     battle(newCharWar, monster);
     expect(newCharWar.EXP).toEqual(20);
   })
+
+  test('player should level up if they get enough exp to do so', () => {
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    battle(newCharWar, monster);
+    expect(newCharWar.lvl).toEqual(2);
+  })
 });
