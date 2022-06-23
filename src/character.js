@@ -1,10 +1,9 @@
-import { timers } from "jquery";
-
 export class Character {
-  
+
   constructor(charClass){
     this.charClass = charClass;
     this.EXP = 0;
+    this.bag = [];
   }
 
   baseStats(){
@@ -12,6 +11,43 @@ export class Character {
       this.int = 10;
       this.str = 2;
       this.hp = 20;
+    }
+    else if(this.charClass == "Warrior"){
+      this.int = 2;
+      this.str = 10;
+      this.hp = 24;
+    }
+    else if(this.charClass == "Rogue"){
+      this.int = 8;
+      this.str = 5;
+      this.hp = 22;
+    }
+    else if(this.charClass == "Cleric"){
+      this.int = 6;
+      this.str = 6;
+      this.hp = 30;
+    }
+  }
+  baseInv(){
+    if(this.charClass == "Wizard"){
+      let Staff = {"name": "Staff", "damage": 10};
+      let Robe = {"name": "Robe", "armor": 2};
+      this.bag.push(Staff, Robe);
+    }
+    else if(this.charClass == "Warrior"){
+      let Sword = {"name": "Sword", "damage": 10};
+      let ChestPlate = {"name": "ChestPlate", "armor": 6};
+      this.bag.push(Sword, ChestPlate);
+    }
+    else if(this.charClass == "Rogue"){
+      let Dagger = {"name": "Dagger", "damage": 10};
+      let Cloak = {"name": "Cloak", "armor": 2};
+      this.bag.push(Dagger, Cloak);
+    }
+    else if(this.charClass == "Cleric"){
+      let Sword = {"name": "Sword", "damage": 10};
+      let ChestPlate = {"name": "ChestPlate", "armor": 6};
+      this.bag.push(Sword, ChestPlate);
     }
   }
 }
