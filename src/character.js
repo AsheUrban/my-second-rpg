@@ -1,5 +1,6 @@
 export class Character {
-  constructor(){
+  constructor(charClass){
+    this.charClass = charClass;
     this.EXP = 0;
   }
 }

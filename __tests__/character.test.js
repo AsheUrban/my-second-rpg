@@ -14,6 +14,6 @@ describe('Character', () => {
 
   test('should give character a class based on an argument', () => {
     const newChar = new Character("Wizard");
-    expect(newChar.class).toEqual("Wizard");
+    expect(newChar.charClass).toEqual("Wizard");
   })
 });
