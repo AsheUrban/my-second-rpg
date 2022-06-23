@@ -30,23 +30,23 @@ export class Character {
   }
   baseInv(){
     if(this.charClass == "Wizard"){
-      let Staff = {"name": "Staff", "damage": 10};
-      let Robe = {"name": "Robe", "armor": 2};
+      const Staff = {"name": "Staff", "damage": 10};
+      const Robe = {"name": "Robe", "armor": 2};
       this.bag.push(Staff, Robe);
     }
     else if(this.charClass == "Warrior"){
-      let Sword = {"name": "Sword", "damage": 10};
-      let ChestPlate = {"name": "ChestPlate", "armor": 6};
+      const Sword = {"name": "Sword", "damage": 10};
+      const ChestPlate = {"name": "ChestPlate", "armor": 6};
       this.bag.push(Sword, ChestPlate);
     }
     else if(this.charClass == "Rogue"){
-      let Dagger = {"name": "Dagger", "damage": 10};
-      let Cloak = {"name": "Cloak", "armor": 2};
+      const Dagger = {"name": "Dagger", "damage": 10};
+      const Cloak = {"name": "Cloak", "armor": 2};
       this.bag.push(Dagger, Cloak);
     }
     else if(this.charClass == "Cleric"){
-      let Sword = {"name": "Sword", "damage": 10};
-      let ChestPlate = {"name": "ChestPlate", "armor": 6};
+      const Sword = {"name": "Sword", "damage": 10};
+      const ChestPlate = {"name": "ChestPlate", "armor": 6};
       this.bag.push(Sword, ChestPlate);
     }
   }
