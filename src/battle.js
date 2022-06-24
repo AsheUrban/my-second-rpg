@@ -1,5 +1,6 @@
 export const battle = (player, enemy) => {
   player.calcValues();
+  
   enemy.hp -= player.dmg;
 
   if(enemy.hp <= 0){

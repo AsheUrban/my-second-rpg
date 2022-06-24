@@ -84,5 +84,5 @@ describe('Character', () => {
     expect(newCharWar.int).toEqual(3);
     expect(newCharWar.str).toEqual(11);
     expect(newCharWar.maxHp).toEqual(25);
-  })
+  });
 });
