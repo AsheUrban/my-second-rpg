@@ -6,6 +6,12 @@ describe('changeState', () => {
     const result = changeState("HP")(5)(player);
     expect(result.HP).toEqual(5);
   });
+
+  test('should let you pass a string', () => {
+    const player = {};
+    const result = changeState("Class")("Wizard")(player);
+    expect(result.Class).toEqual("Wizard");
+  });
 });
 
 describe('storeState', () => {

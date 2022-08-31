@@ -11,22 +11,27 @@ export const stateControl = storeState();
 
 export const changeState = (prop) => {
   return (value) => {
-    return (state) => ({
-      ...state,
-      [prop]: (state[prop] || 0) + value
-    });
+    if (typeof(value) == 'string') {
+      return (state) => ({
+        ...state,
+        [prop]: value
+      });
+    } else if (typeof(value) == 'number') {
+      return (state) => ({
+        ...state,
+        [prop]: (state[prop] || 0) + value
+      });
+    }
   };
 };
 
-export const healthModifier = changeState("HP");
-export const magicHeal = healthModifier(5);
-export const superMagicHeal = healthModifier(10);
-export const shortRest = healthModifier(5);
-export const longRest = healthModifier(10);
-export const lightDamage = healthModifier(-5);
-export const heavyDamage = healthModifier(-10);
+// export const healthModifier = changeState("HP");
+// export const magicHeal = healthModifier(5);
+// export const superMagicHeal = healthModifier(10);
+// export const shortRest = healthModifier(5);
+// export const longRest = healthModifier(10);
+// export const lightDamage = healthModifier(-5);
+// export const heavyDamage = healthModifier(-10);
 
-export const playerClass = changeState("Class");
-export const Wizard = playerClass("Wizard");
-
-const ne = {}
+// export const playerClass = changeState("Class");
+// export const Wizard = playerClass("Wizard");
