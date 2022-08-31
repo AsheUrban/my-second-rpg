@@ -7,7 +7,7 @@ export const storeState = (initialState) => {
   }
 }
 
-// export const stateControl = storeState();
+export const stateControl = storeState();
 
 export const changeState = (prop) => {
   return (value) => {

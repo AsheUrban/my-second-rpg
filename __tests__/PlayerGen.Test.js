@@ -15,4 +15,12 @@ describe('storeState', () => {
     const result = stateControl();
     expect(result).toEqual(currentState);
   });
+
+  test('should make an updated clone of our current state and store it in a new state', () => {
+    const currentState = { HP: 5 };
+    const stateControl = storeState(currentState);
+    const heal = changeState("HP")(5);
+    const result = stateControl(heal);
+    expect(result.HP).toEqual(10);
+  });
 });
