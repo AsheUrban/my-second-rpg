@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:rgb(24, 24, 24);
+  padding:8px;
+  text-align: center;
+}
+
+div#header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background-color: rgb(24, 24, 24);
+  padding:8px;
+  text-align: center;
+}
+
+body {
+  background-image: url("/img/mysterious-machine.jpg");
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(24, 24, 24);
+}
+
+h1 {
+  font-size: 48px;
+  font-family: 'Righteous', cursive;
+  color: rgb(255, 143, 102);
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Righteous', cursive;
+  color:rgb(24, 24, 24);
+}
+
+h3 {
+  font-size: 22px;
+  font-family: 'Righteous', cursive;
+  color:rgb(24, 24, 24);
+}
+
+h4 {
+  font-size: 22px;
+  font-family: 'Righteous', cursive;
+  color: rgb(251, 134, 154);
+}
+
+
+
+a:link {
+  color:  rgb(251, 134, 154);
+}
+
+a:visited {
+  color:  rgb(251, 134, 154);
+}
+
+a:hover {
+  color:  rgb(255, 159, 175);
+}
+
+a:active{
+  color:  rgb(251, 134, 154);
+}
+
+.container {
+  background-color: rgba(245, 245, 245, 0.879);
+  border: rgb(24, 24, 24);
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding: 100px;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.card {
+  background-color:rgba(245, 245, 245, 0);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 0px;
+}
+
+.fancyBtn {
+  background-color:  rgb(255, 159, 175);
+  color:rgb(24, 24, 24);
+  padding: 5px;
+  border-radius: 1rem;
+  width: 200px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.fancyBtn a:link {
+  color: rgb(24, 24, 24);
+}
+
+.fancyBtn a:visited {
+  color:rgb(24, 24, 24);
+}
+
+.fancyBtn a:hover {
+  color: rgb(24, 24, 24);
+}
+
+.fancyBtn a:active {
+  color: rgb(24, 24, 24);
+}

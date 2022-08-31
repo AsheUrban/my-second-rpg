@@ -5,6 +5,10 @@
   <body>
     <div class="container">
       <form id="buildCharacter">
+        <h1>Enter Character Name:</h1>
+        <div class="form-group">
+          <input id="name" class="form-control" type="text">
+        </div>        
         <h1>Choose Character Race:</h1>
         <select class="form-control" id="Race">
           <option value="Elf">Elf</option>
@@ -22,7 +26,7 @@
 
           <button type="submit">Submit</button>
       </form> 
-      <button class="btn-success" id="show-state">Current Stats</button>
+      <button class="fancyBtn" id="show-state">Current Stats</button>
       <h1>Character Stats: </h1>
       <h3><div id="character"></div></h3>
     </div>

@@ -29,6 +29,7 @@ export const changeState = (prop) => {
 export const playerRace = changeState("Race");
 export const nPCRace = changeState("Race");
 export const playerClass = changeState("Class");
+export const playerName = changeState("Name");
 export const healthModifier = changeState("HP");
 export const smallWeapon = changeState("smallWeapon");
 export const mediumWeapon = changeState("mediumWeapon");
