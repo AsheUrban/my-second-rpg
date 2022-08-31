@@ -5,5 +5,10 @@ describe('changeState', () => {
     const player = {};
     const result = changeState("HP")(5)(player);
     expect(result.HP).toEqual(5);
+
+
+
+
+    
   });
 });
