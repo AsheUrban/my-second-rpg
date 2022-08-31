@@ -48,10 +48,10 @@ export const goblin = playerRace("Goblin");
 export const wolf = playerRace("Wolf");
 
 //Class
-export const wizard = playerClass("Wizard");
-export const cleric = playerClass("Cleric");
-export const rogue = playerClass("Rogue");
-export const paladin = playerClass("Paladin");
+// export const wizard = playerClass("Wizard");
+// export const cleric = playerClass("Cleric");
+// export const rogue = playerClass("Rogue");
+// export const paladin = playerClass("Paladin");
 
 //Health Modifier
 export const baseHealth = healthModifier(30);
