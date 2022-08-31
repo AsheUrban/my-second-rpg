@@ -30,25 +30,25 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   font-family: 'Righteous', cursive;
   color: rgb(255, 143, 102);
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 22px;
   font-family: 'Righteous', cursive;
   color:rgb(24, 24, 24);
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Righteous', cursive;
   color:rgb(24, 24, 24);
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Righteous', cursive;
   color: rgb(251, 134, 154);
 }
@@ -90,6 +90,8 @@ a:active{
 }
 
 .fancyBtn {
+  margin-top: 15px;
+  margin-bottom: 15px;
   background-color:  rgb(255, 159, 175);
   color:rgb(24, 24, 24);
   padding: 5px;
@@ -113,4 +115,8 @@ a:active{
 
 .fancyBtn a:active {
   color: rgb(24, 24, 24);
+}
+
+#characterStats {
+  display: none;
 }

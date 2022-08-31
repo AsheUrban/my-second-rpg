@@ -1,34 +1,40 @@
 <html>
   <head>
-    <title>Add Player Racre</title>
+    <title>Build Character</title>
   </head>
   <body>
     <div class="container">
-      <form id="buildCharacter">
-        <h1>Enter Character Name:</h1>
-        <div class="form-group">
-          <input id="name" class="form-control" type="text">
-        </div>        
-        <h1>Choose Character Race:</h1>
-        <select class="form-control" id="Race">
-          <option value="Elf">Elf</option>
-          <option value="Human">Human</option>
-          <option value="Dwarf">Dwarf</option>
-        </select>
-
-        <h1>Choose Character Class:</h1>
-        <select class="form-control" id="Class">
-          <option value="Wizard">Wizard</option>
-          <option value="Cleric">Cleric</option>
-          <option value="Paladin">Paladin</option>
-          <option value="Rogue">Rogue</option>
-        </select>
-
-          <button type="submit">Submit</button>
-      </form> 
-      <button class="fancyBtn" id="show-state">Current Stats</button>
-      <h1>Character Stats: </h1>
-      <h3><div id="character"></div></h3>
+      <div id="characterBuilder">
+        <h1>Build Your Character</h1>
+        <form id="buildCharacter">
+          <h2>Enter Character Name:</h2>
+          <div class="form-group">
+            <input id="name" class="form-control" type="text" required>
+          </div>
+                  
+          <h2>Choose Character Race:</h2>
+          <select class="form-control" id="Race">
+            <option value="Elf">Elf</option>
+            <option value="Human">Human</option>
+            <option value="Dwarf">Dwarf</option>
+          </select>
+  
+          <h2>Choose Character Class:</h2>
+          <select class="form-control" id="Class">
+            <option value="Wizard">Wizard</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Paladin">Paladin</option>
+            <option value="Rogue">Rogue</option>
+          </select>
+          <button type="submit" class="fancyBtn">Submit</button>
+        </form> 
+      </div>
+      <div id="characterStats">
+        <h1>Character Stats</h1>
+        <h3><div id="character"></div></h3>
+      </div>
+    
+      <!-- <button class="fancyBtn" id="show-state">Show Current Stats</button> -->
     </div>
   </body>
 </html>

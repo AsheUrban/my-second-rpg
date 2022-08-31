@@ -17,6 +17,8 @@ $(document).ready(function() {
     stateControl(characterClass);
     const newState = stateControl(baseHealth);
 
+    $( "#characterBuilder" ).hide();
+    $( "#characterStats" ).show();
     $('#character').text(`Name: ${newState.Name}, Race: ${newState.Race}, Class: ${newState.Class}, HP: ${newState.HP}`);
   });
 
