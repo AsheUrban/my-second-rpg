@@ -1,5 +1,5 @@
-export const storeState = (initialState) => {
-  let currentState = initialState;
+export const storeState = () => {
+  let currentState = {};
   return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
@@ -25,40 +25,42 @@ export const changeState = (prop) => {
   };
 };
 
+//States
+export const playerRace = changeState("Race");
+export const playerClass = changeState("Class");
 export const healthModifier = changeState("HP");
+export const smallWeapon = changeState("smallWeapon");
+export const mediumWeapon = changeState("mediumWeapon");
+export const largeWeapon = changeState("largeWeapon");
+// export const experience = changeState("XP");
+// export const strength = changeState("S")
+// export const intelligence = changeState("I");
 
-export const magicHeal = healthModifier(5);
+//Race
+export const elf = playerRace("Elf");
+export const dwarf = playerRace("Dwarf");
+export const human = playerRace("Human");
+export const orc = playerRace("Orc");
+export const goblin = playerRace("Goblin");
+export const wolf = playerRace("Wolf")
+
+//Class
+export const wizard = playerClass("Wizard");
+export const cleric = playerClass("Cleric");
+export const rogue = playerClass("Rogue");
+export const paladin = playerClass("Paladin");
+
+//Health Modifier
+export const baseHealth = healthModifier(30);
+export const magicHealth = healthModifier(5);
 export const superMagicHeal = healthModifier(10);
 export const shortRest = healthModifier(5);
 export const longRest = healthModifier(10);
 export const lightDamage = healthModifier(-5);
 export const heavyDamage = healthModifier(-10);
 
-export const playerClass = changeState("Class");
-
-export const wizard = playerClass("Wizard");
-export const cleric = playerClass("Cleric");
-export const rogue = playerClass("Rogue");
-export const paladin = playerClass("Paladin");
-
-export const playerRace = changeState("Race");
-
-export const experience = changeState("XP");
-
-export const strength = changeState("S")
-
-export const intelligence = changeState("I");
-
-export const smallWeapon = changeState("smallWeapon");
 export const dagger = smallWeapon("Dagger");
 
-export const mediumWeapon = changeState("mediumWeapon");
 export const crossBow = mediumWeapon("Crossbow");
 
-export const largeWeapon = changeState("largeWeapon");
 export const battleAxe = largeWeapon("Battle Axe");
-
-battleAxe(wizard)
-
-
-
