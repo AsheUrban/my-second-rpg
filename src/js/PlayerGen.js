@@ -18,11 +18,15 @@ export const changeState = (prop) => {
   };
 };
 
-// export const heal = changeState("HP");
-// export const magicHeal = heal(5);
-// export const superMagicHeal = heal(10);
-// export const shortRest = heal(5);
-// export const longRest = heal(10);
+export const healthModifier = changeState("HP");
+export const magicHeal = healthModifier(5);
+export const superMagicHeal = healthModifier(10);
+export const shortRest = healthModifier(5);
+export const longRest = healthModifier(10);
+export const lightDamage = healthModifier(-5);
+export const heavyDamage = healthModifier(-10);
 
+export const playerClass = changeState("Class");
+export const Wizard = playerClass("Wizard");
 
-// stateControl(magicHeal);
+const ne = {}
