@@ -1,11 +1,11 @@
-// export const storeState = () => {
-//   let currentState = {};
-//   return (stateChangeFunction = state => state) => {
-//     const newState = stateChangeFunction(currentState);
-//     currentState = {...newState};
-//     return newState;
-//   }
-// }
+export const storeState = (initialState) => {
+  let currentState = initialState;
+  return (stateChangeFunction = state => state) => {
+    const newState = stateChangeFunction(currentState);
+    currentState = {...newState};
+    return newState;
+  }
+}
 
 // export const stateControl = storeState();
 
