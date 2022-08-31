@@ -4,8 +4,8 @@ export const storeState = () => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
     return newState;
-  }
-}
+  };
+};
 
 export const stateControl = storeState();
 
@@ -27,6 +27,7 @@ export const changeState = (prop) => {
 
 //States
 export const playerRace = changeState("Race");
+export const nPCRace = changeState("Race");
 export const playerClass = changeState("Class");
 export const healthModifier = changeState("HP");
 export const smallWeapon = changeState("smallWeapon");
@@ -37,12 +38,14 @@ export const largeWeapon = changeState("largeWeapon");
 // export const intelligence = changeState("I");
 
 //Race
-export const elf = playerRace("Elf");
-export const dwarf = playerRace("Dwarf");
-export const human = playerRace("Human");
+// export const elf = playerRace("Elf");
+// export const dwarf = playerRace("Dwarf");
+// export const human = playerRace("Human");
+
+//Race - NonPlayerCharacers
 export const orc = playerRace("Orc");
 export const goblin = playerRace("Goblin");
-export const wolf = playerRace("Wolf")
+export const wolf = playerRace("Wolf");
 
 //Class
 export const wizard = playerClass("Wizard");

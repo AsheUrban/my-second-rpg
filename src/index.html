@@ -4,10 +4,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="add-buttons">
-        <button class="btn-success" id="playerRace">Add Race</button>
-        <button class="btn-success" id="show-state">Current Stats</button>
-      </div>
+      <form id="buildCharacter">
+        <h1>Choose Character Race:</h1>
+        <select class="form-control" id="Race">
+          <option value="Elf">Elf</option>
+          <option value="Human">Human</option>
+          <option value="Dwarf">Dwarf</option>
+        </select>
+
+        <!-- <h1>Choose Character Class:</h1>
+        <select class="form-control" id="Class">
+          <option value="wizard">Wizard</option>
+          <option value="cleric">Cleric</option>
+          <option value="paladin">Paladin</option>
+          <option value="rogue">Rogue</option>
+        </select> -->
+
+
+          <button type="submit" id="playerRace">Submit</button>
+        </div>  
+      </form>
+      <button class="btn-success" id="show-state">Current Stats</button>
       <h1>Character Stats</h1>
       <h3><div id="Race-value">Race:</div></h3>
     </div>
