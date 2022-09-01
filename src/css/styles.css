@@ -116,7 +116,3 @@ a:active{
 .fancyBtn a:active {
   color: rgb(24, 24, 24);
 }
-
-#characterStats {
-  display: none;
-}

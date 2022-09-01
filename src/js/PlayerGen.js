@@ -36,7 +36,7 @@ export const playerMagic = changeState("Magic");
 
 //Health Modifier
 export const baseHealth = healthModifier(30);
-export const magicHealth = healthModifier(5);
+export const magicHeal = healthModifier(5);
 export const superMagicHeal = healthModifier(10);
 export const shortRest = healthModifier(5);
 export const longRest = healthModifier(10);
