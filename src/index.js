@@ -24,16 +24,15 @@ const makeNewPlayer = (charId, nameArg, raceArg, characterClassArg, weaponArg, m
 }
 
 const updateDisplay = (newState, id) => {
-  document.getElementById("characterStats").innerText = newState;
+  document.getElementById("character").innerText = `${newState.Name}`;
 }
 // let charId = 0
 function handleFormSubmission(event) {
   let charId = 0;
-  //call on form #id = buildCharacter
   charId++
-  // event.preventDefault();
+  event.preventDefault();
 
-  const name = document.getElementById("#Name").value;
+  const name = document.getElementById("Name").value;
   const race = document.querySelector("select#Race").value;
   const characterClass = document.querySelector("select#Class").value;
   const weapon = document.querySelector("select#Weapon").value;
@@ -46,8 +45,10 @@ window.addEventListener("load", function (){
   document.querySelector(".fancyBtn").addEventListener("click",  function() {
     handleFormSubmission();
     updateDisplay();
+    // document.getElementById("#character").innerText = `string text string text`
   });
 });
+
 
 //   $('#character').append(
 //     `<div id="${charId}-Details">Name: ${newState.Name}, Race: ${newState.Race}, Class: ${newState.Class}, Weapon: ${newState.Weapon}, Magic Style: ${newState.Magic}, HP: ${newState.HP} MP: ${newState.MP}</div>
