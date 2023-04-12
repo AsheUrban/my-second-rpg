@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { playerId, playerRace, baseHealth, playerClass, playerName, playerWeapon, playerMagic, storeState, lightDamage, magicHeal, stateControl, baseMana}  from './js/PlayerGen.js';
 
+//create globally scoped variable that is an array of objs that store their own state -- Did I say this right???
+
 const makeNewPlayer = (charId, nameArg, raceArg, characterClassArg, weaponArg, magicArg) => {
   const stateControl = storeState();
   const id = playerId(charId);
@@ -29,6 +31,7 @@ const updateDisplay = (newState, charId) => {
   `<button class='fancyBtn' id='${charId}-Damage'>Take Damage</button>
   <br>
   <button class='fancyBtn' id='${charId}-Heal'>Heal</button>`;
+  console.log(newState);
   document.getElementById("character").append(div);
 }
 
@@ -43,7 +46,7 @@ function handleFormSubmission() {
   const magic = document.querySelector("select#Magic").value;
   // console.log(name);  
   console.log(charId);
-  makeNewPlayer(charId, name, race, characterClass, weapon, magic); 
+  return makeNewPlayer(charId, name, race, characterClass, weapon, magic); 
 }
 
 window.addEventListener("load", function (){
@@ -54,9 +57,11 @@ window.addEventListener("load", function (){
   });
   this.document.querySelector("body").addEventListener("")
 });
+
+// otherFunction() {
+//   something
+// }
 // id=1-Damage
-
-
 
   // (`${charId}-Damage`).click(function() {
   //   const newState = stateControl(lightDamage);
