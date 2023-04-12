@@ -31,6 +31,7 @@ export const nPCRace = changeState("Race");
 export const playerClass = changeState("Class");
 export const playerName = changeState("Name");
 export const healthModifier = changeState("HP");
+export const manaModifier = changeState("Mana");
 export const playerWeapon = changeState("Weapon");
 export const playerMagic = changeState("Magic");
 
@@ -42,6 +43,11 @@ export const shortRest = healthModifier(5);
 export const longRest = healthModifier(10);
 export const lightDamage = healthModifier(-5);
 export const heavyDamage = healthModifier(-10);
+
+//Mana Modifier
+export const baseMana = manaModifier(15);
+export const manaHeal = manaModifier(5);
+export const spellCast = manaModifier(-5);
 
 //Stretch goals
 // export const experience = changeState("XP");
