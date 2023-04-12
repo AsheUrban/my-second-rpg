@@ -27,6 +27,7 @@ export const changeState = (prop) => {
 
 //States
 export const playerRace = changeState("Race");
+export const playerId = changeState("id");
 export const nPCRace = changeState("Race");
 export const playerClass = changeState("Class");
 export const playerName = changeState("Name");
