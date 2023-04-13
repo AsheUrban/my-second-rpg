@@ -15,11 +15,7 @@ const makeNewPlayer = (charId, nameArg, raceArg, characterClassArg, weaponArg, m
   const characterClass = playerClass(characterClassArg);
   const weapon = playerWeapon(weaponArg);
   const magic = playerMagic(magicArg);
-  // console.log(name)
-  // console.log(race);
-  // console.log(characterClass);
-  // console.log(weapon);
-  // console.log(magic);
+
   stateControl(name);
   stateControl(race);
   stateControl(characterClass);
